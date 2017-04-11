@@ -1,1 +1,40 @@
-{     "devDependencies": {         "vhost": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-vhost",     "homepage": "https://github.com/npmtest/node-npmtest-vhost",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-vhost.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "test coverage for [vhost (v3.0.2)](https://github.com/expressjs/vhost) [![npm package](https://img.shields.io/npm/v/npmtest-vhost.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-vhost) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-vhost.svg)](https://travis-ci.org/npmtest/node-npmtest-vhost)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha",
+        "vhost": "*"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-vhost",
+    "keywords": [
+        "coverage",
+        "test",
+        "vhost"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_vhost.js",
+    "name": "npmtest-vhost",
+    "nameAlias": "npmtest_vhost",
+    "nameOriginal": "npmtest-vhost",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-vhost.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
