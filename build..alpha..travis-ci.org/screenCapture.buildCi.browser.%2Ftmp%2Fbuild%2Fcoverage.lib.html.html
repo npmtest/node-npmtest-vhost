@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-vhost/vhost/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-vhost/node_modules/vhost/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-vhost">npmtest-vhost (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-vhost/vhost/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-vhost/node_modules/vhost/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">21.57% <small>(11 / 51)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-vhost/vhost/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-vhost/node_modules/vhost/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -580,34 +578,34 @@ var escapeReplace = '\\$1'
  * @public
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function vhost(hostname, handle) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!hostname) {</span>
-<span class="cstat-no" title="statement not covered" >    throw new TypeError('argument hostname is required')</span>
+<span class="fstat-no" title="function not covered">function vhost(hostname, handle) {</span>
+<span class="cstat-no" title="statement not covered">  if (!hostname) {</span>
+<span class="cstat-no" title="statement not covered">    throw new TypeError('argument hostname is required')</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!handle) {</span>
-<span class="cstat-no" title="statement not covered" >    throw new TypeError('argument handle is required')</span>
+<span class="cstat-no" title="statement not covered">  if (!handle) {</span>
+<span class="cstat-no" title="statement not covered">    throw new TypeError('argument handle is required')</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (typeof handle !== 'function') {</span>
-<span class="cstat-no" title="statement not covered" >    throw new TypeError('argument handle must be a function')</span>
+<span class="cstat-no" title="statement not covered">  if (typeof handle !== 'function') {</span>
+<span class="cstat-no" title="statement not covered">    throw new TypeError('argument handle must be a function')</span>
   }
 &nbsp;
   // create regular expression for hostname
-<span class="cstat-no" title="statement not covered" >  var regexp = hostregexp(hostname)</span>
+<span class="cstat-no" title="statement not covered">  var regexp = hostregexp(hostname)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >function vhost(req, res, next) {</span></span>
-<span class="cstat-no" title="statement not covered" >    var vhostdata = vhostof(req, regexp)</span>
+<span class="cstat-no" title="statement not covered">  return <span class="fstat-no" title="function not covered">function vhost(req, res, next) {</span></span>
+<span class="cstat-no" title="statement not covered">    var vhostdata = vhostof(req, regexp)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!vhostdata) {</span>
-<span class="cstat-no" title="statement not covered" >      return next()</span>
+<span class="cstat-no" title="statement not covered">    if (!vhostdata) {</span>
+<span class="cstat-no" title="statement not covered">      return next()</span>
     }
 &nbsp;
     // populate
-<span class="cstat-no" title="statement not covered" >    req.vhost = vhostdata</span>
+<span class="cstat-no" title="statement not covered">    req.vhost = vhostdata</span>
 &nbsp;
     // handle
-<span class="cstat-no" title="statement not covered" >    handle(req, res, next)</span>
+<span class="cstat-no" title="statement not covered">    handle(req, res, next)</span>
   }
 }
 &nbsp;
@@ -619,19 +617,19 @@ var escapeReplace = '\\$1'
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function hostnameof(req) {</span>
-<span class="cstat-no" title="statement not covered" >  var host = req.headers.host</span>
+<span class="fstat-no" title="function not covered">function hostnameof(req) {</span>
+<span class="cstat-no" title="statement not covered">  var host = req.headers.host</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!host) {</span>
-<span class="cstat-no" title="statement not covered" >    return</span>
+<span class="cstat-no" title="statement not covered">  if (!host) {</span>
+<span class="cstat-no" title="statement not covered">    return</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var offset = host[0] === '['</span>
+<span class="cstat-no" title="statement not covered">  var offset = host[0] === '['</span>
     ? host.indexOf(']') + 1
     : 0
-<span class="cstat-no" title="statement not covered" >  var index = host.indexOf(':', offset)</span>
+<span class="cstat-no" title="statement not covered">  var index = host.indexOf(':', offset)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return index !== -1</span>
+<span class="cstat-no" title="statement not covered">  return index !== -1</span>
     ? host.substring(0, index)
     : host
 }
@@ -644,8 +642,8 @@ var escapeReplace = '\\$1'
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function isregexp(val) {</span>
-<span class="cstat-no" title="statement not covered" >  return Object.prototype.toString.call(val) === '[object RegExp]'</span>
+<span class="fstat-no" title="function not covered">function isregexp(val) {</span>
+<span class="cstat-no" title="statement not covered">  return Object.prototype.toString.call(val) === '[object RegExp]'</span>
 }
 &nbsp;
 /**
@@ -655,22 +653,22 @@ var escapeReplace = '\\$1'
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function hostregexp(val) {</span>
-<span class="cstat-no" title="statement not covered" >  var source = !isregexp(val)</span>
+<span class="fstat-no" title="function not covered">function hostregexp(val) {</span>
+<span class="cstat-no" title="statement not covered">  var source = !isregexp(val)</span>
     ? String(val).replace(escapeRegExp, escapeReplace).replace(asteriskRegExp, asteriskReplace)
     : val.source
 &nbsp;
   // force leading anchor matching
-<span class="cstat-no" title="statement not covered" >  if (source[0] !== '^') {</span>
-<span class="cstat-no" title="statement not covered" >    source = '^' + source</span>
+<span class="cstat-no" title="statement not covered">  if (source[0] !== '^') {</span>
+<span class="cstat-no" title="statement not covered">    source = '^' + source</span>
   }
 &nbsp;
   // force trailing anchor matching
-<span class="cstat-no" title="statement not covered" >  if (!endAnchoredRegExp.test(source)) {</span>
-<span class="cstat-no" title="statement not covered" >    source += '$'</span>
+<span class="cstat-no" title="statement not covered">  if (!endAnchoredRegExp.test(source)) {</span>
+<span class="cstat-no" title="statement not covered">    source += '$'</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return new RegExp(source, 'i')</span>
+<span class="cstat-no" title="statement not covered">  return new RegExp(source, 'i')</span>
 }
 &nbsp;
 /**
@@ -682,38 +680,39 @@ var escapeReplace = '\\$1'
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function vhostof(req, regexp) {</span>
-<span class="cstat-no" title="statement not covered" >  var host = req.headers.host</span>
-<span class="cstat-no" title="statement not covered" >  var hostname = hostnameof(req)</span>
+<span class="fstat-no" title="function not covered">function vhostof(req, regexp) {</span>
+<span class="cstat-no" title="statement not covered">  var host = req.headers.host</span>
+<span class="cstat-no" title="statement not covered">  var hostname = hostnameof(req)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!hostname) {</span>
-<span class="cstat-no" title="statement not covered" >    return</span>
+<span class="cstat-no" title="statement not covered">  if (!hostname) {</span>
+<span class="cstat-no" title="statement not covered">    return</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var match = regexp.exec(hostname)</span>
+<span class="cstat-no" title="statement not covered">  var match = regexp.exec(hostname)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!match) {</span>
-<span class="cstat-no" title="statement not covered" >    return</span>
+<span class="cstat-no" title="statement not covered">  if (!match) {</span>
+<span class="cstat-no" title="statement not covered">    return</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var obj = Object.create(null)</span>
+<span class="cstat-no" title="statement not covered">  var obj = Object.create(null)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  obj.host = host</span>
-<span class="cstat-no" title="statement not covered" >  obj.hostname = hostname</span>
-<span class="cstat-no" title="statement not covered" >  obj.length = match.length - 1</span>
+<span class="cstat-no" title="statement not covered">  obj.host = host</span>
+<span class="cstat-no" title="statement not covered">  obj.hostname = hostname</span>
+<span class="cstat-no" title="statement not covered">  obj.length = match.length - 1</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  for (var i = 1; i &lt; match.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    obj[i - 1] = match[i]</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 1; i &lt; match.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    obj[i - 1] = match[i]</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return obj</span>
+<span class="cstat-no" title="statement not covered">  return obj</span>
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 13:55:51 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 21:45:03 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
