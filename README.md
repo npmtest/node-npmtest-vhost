@@ -1,4 +1,7 @@
-# test coverage for  [vhost (v3.0.2)](https://github.com/expressjs/vhost)  [![npm package](https://img.shields.io/npm/v/npmtest-vhost.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-vhost) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-vhost.svg)](https://travis-ci.org/npmtest/node-npmtest-vhost)
+# npmtest-vhost
+
+#### basic test coverage for  [vhost (v3.0.2)](https://github.com/expressjs/vhost)  [![npm package](https://img.shields.io/npm/v/npmtest-vhost.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-vhost) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-vhost.svg)](https://travis-ci.org/npmtest/node-npmtest-vhost)
+
 #### virtual domain hosting
 
 [![NPM](https://nodei.co/npm/vhost.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/vhost)
@@ -7,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-vhost/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-vhost/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-vhost/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-vhost/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-vhost/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-vhost/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-vhost/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-vhost/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-vhost/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-vhost/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-vhost/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-vhost/build/coverage.html/index.html)
 
@@ -104,7 +107,8 @@
         "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
         "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
     },
-    "version": "3.0.2"
+    "version": "3.0.2",
+    "bin": {}
 }
 ```
 
